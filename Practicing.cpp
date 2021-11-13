@@ -13,15 +13,15 @@ public:
     std::string IntegerToHex(int Integer);
     std::string IntegerToBinary(int Input);
 
-    std::string GetHexValue() { return Hex; }
+    int GetHexValue() { return Hex; }
     int GetIntegerValue() { return Integer; }
     std::string GetBinaryValue() { return Binary; }
 
 private:
 
-    int Integer{};
-    std::string Hex{};
-    std::string Binary{};
+    int Integer = {0};
+    int Hex = {0};
+    std::string Binary = {0};
 
 };
 
@@ -273,9 +273,9 @@ std::string Converter::IntegerToBinary(int Input)
 
 int main()
 {
-    Converter ConvertHexToInteger(4);
+    Converter ConvertHexToInteger('a');
 
-    std::cout << ConvertHexToInteger.GetHexValue() << std::endl;
+    std::cout << ConvertHexToInteger.GetIntegerValue() << std::endl;
 
     
 }
